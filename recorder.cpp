@@ -54,6 +54,7 @@ void MainRecorderCallback(const sensor_msgs::JointState::ConstPtr& jointMsg)
 * recorderControlCallback function is the callback for the /record topic. 
 * It is  mainly used to control when this node starts/stops listening to the /joint_states topic.
 * This is done by (start, stop, shutdown) messages sent to the /record topic. 
+* To change the name of the file this node writes to, just publish the name of the new file to the /record topic. The default file name is default.csv
 */
 
 void recorderControlCallback(const std_msgs::String::ConstPtr& msg)
